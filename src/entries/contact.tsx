@@ -1,0 +1,9 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import SiteLayout from '../components/SiteLayout';
+import Contact from '../components/Contact';
+import '../index.css';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode><SiteLayout activeSection="contact"><Contact /></SiteLayout></StrictMode>,
+);

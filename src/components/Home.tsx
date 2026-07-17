@@ -6,11 +6,7 @@
 import { Mail, BookOpen, UserCheck, Linkedin, FileText, ArrowRight, MapPin, Building2, ExternalLink } from 'lucide-react';
 import { PERSONAL_INFO, RESEARCH_INTERESTS, PUBLICATIONS, RESEARCH_PROJECTS, CONFERENCES } from '../data';
 
-interface HomeProps {
-  onNavigate: (section: string) => void;
-}
-
-export default function Home({ onNavigate }: HomeProps) {
+export default function Home() {
   // Pulling specific publication and research projects for clean home view
   const featuredPub = PUBLICATIONS[0];
   const featuredProj = RESEARCH_PROJECTS[0];
@@ -139,17 +135,14 @@ export default function Home({ onNavigate }: HomeProps) {
           <h2 className="text-xl font-serif font-semibold text-slate-900">
             Selected Work
           </h2>
-          <button
-            onClick={() => {
-              onNavigate('research');
-              window.location.hash = '#research';
-            }}
+          <a
+            href="/research/"
             className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-slate-950 transition-colors uppercase tracking-wider"
             id="home-view-all-research-btn"
           >
             <span>All Research</span>
             <ArrowRight className="h-3.5 w-3.5" />
-          </button>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id="featured-papers-grid">
