@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lesmanghazaryan.com/sitemap.xml
